@@ -1,0 +1,33 @@
+{
+  "name": "servive-parser",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon app.js",
+    "build": "webpack --mode=production",
+    "start": "npm-run-all --parallel watch:server watch:build",
+    "watch:build": "webpack --watch",
+    "watch:server": "nodemon --inspect=\"5858\" \"./build/bundle.js\" --watch \"./build\" "
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "needle": "^2.2.4",
+    "nodemon": "^1.18.6",
+    "request": "^2.88.0",
+    "@babel/core": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "@babel/preset-env": "^7.1.6",
+    "npm-run-all": "^4.1.3",
+    "regenerator-runtime": "^0.13.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
